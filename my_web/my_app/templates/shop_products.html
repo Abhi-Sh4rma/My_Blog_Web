@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All Products</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <!-- Include header content -->
+        {% comment %} {% include 'header.html' %} {% endcomment %}
+    </header>
+
+    <main>
+        <h1>Shop All Products</h1>
+        <div class="products-list">
+            {% for product in products %}
+            <div class="product-item">
+                <h2>{{ product.name }}</h2>
+                <p>Price: {{ product.price }}</p>
+                <p>{{ product.description }}</p>
+                <a href="{% url 'product_detail' product.id %}">View Details</a>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    <footer>
+        <!-- Include footer content -->
+        {% comment %} {% include 'footer.html' %} {% endcomment %}
+    </footer>
+</body>
+</html>

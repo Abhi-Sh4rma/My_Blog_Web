@@ -1,0 +1,171 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our premium car accessories: Seat Covers, Car Mats, Gadgets, and more.">
+    <meta name="keywords" content="car accessories, products, car gadgets, car seats, automotive upgrades">
+    <title>Our Products - Car Accessories Store</title>
+    <style>
+        /* Reset some basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            background-color: #0f1626;
+            color: white;
+        }
+
+        header.main-header {
+            text-align: center;
+            background: linear-gradient(to right, #ff6a00, #ee0979);
+            padding: 40px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: bold;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #162447;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            font-size: 16px;
+            padding: 0 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff2e63;
+        }
+
+        /* Product Grid Styles */
+        .products-section {
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            background-color: #1b1f3b;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Individual Product Card */
+        .product-card {
+            background-color: #162447;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            color: #ff2e63;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .product-card p {
+            margin-bottom: 20px;
+            color: #ffffffb3;
+            font-size: 0.9rem;
+        }
+
+        .product-card button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ff2e63;
+            color: white;
+            text-transform: uppercase;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product-card button:hover {
+            background-color: #ff577f;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f4068;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>Our Premium Car Accessories</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="{% url 'products' %}">Products</a>
+        <a href="#">Special Offers</a>
+        <a href="#">Contact Us</a>
+    </nav>
+
+    <section class="products-section">
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://www.5kcarcare.com/assets/img/car-accessories/seat-cover.jpg" alt="Seat Covers">
+                <h3>Luxurious Seat Covers</h3>
+                <p>Premium seat covers to enhance your car's interior.</p>
+                <button>View Product</button>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOm1f2fHPVuCy-Y48IdMusYY5OGAYEJi4kfQ&s" alt="Car Mats">
+                <h3>Durable Car Mats</h3>
+                <p>High-quality mats for lasting protection.</p>
+                <button>View Product</button>
+            </div>
+            <div class="product-card">
+                <img src="https://5.imimg.com/data5/SD/GO/MY-37501971/car-accessories.jpg" alt="Car Gadgets">
+                <h3>Advanced Car Gadgets</h3>
+                <p>Innovative gadgets for a smarter drive.</p>
+                <button>View Product</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Car Accessories Store. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

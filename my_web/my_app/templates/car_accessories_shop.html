@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Car Accessories Store: Seat Covers, Car Mats, Gadgets, and more. Upgrade your ride with the best products." />
+    <meta name="keywords" content="car accessories, premium car products, car gadgets, car seats, automotive, vehicle upgrades" />
+    <title>Car Accessories Shop - Upgrade Your Ride</title>
+    <style type="text/css">
+        /* Overall background and font styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Subtitle styling with gradient background */
+        #subTitle {
+            background: linear-gradient(to right, #43cea2, #185a9d);
+            color: #ffffff;
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Navbar styling */
+        nav {
+            background: linear-gradient(to left, #43cea2, #185a9d);
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            font-size: 16px;
+            padding: 0 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff2e63;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: url('https://wallpapershome.com/images/pages/pic_h/24939.jpg') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 1px 1px 5px black;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+        }
+
+        /* Main content sections */
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ff2e63;
+        }
+
+        .section a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff2e63, #ff577f);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .section a:hover {
+            background: linear-gradient(90deg, #ff577f, #ff2e63);
+        }
+
+        /* Product section styling */
+        .products {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+        }
+
+        .product-item {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            width: 30%;
+            padding: 20px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            color: #ffffff;
+        }
+
+        .product-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .product-item h3 {
+            margin-top: 15px;
+            color: #ff2e63;
+        }
+
+        .product-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer styling */
+        footer {
+            background: #1f4068;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="subTitle">
+        MAA BHAGWATI MOTORS & Car Accessories Shop
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="{% url 'products' %}">Products</a>
+        <a href="{% url 'special_offers' %}">Special_Offers</a>
+        <a href="#">Contact Us</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1>Top Quality Car Accessories</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Explore Our Best Sellers</h2>
+            <div class="products">
+                <div class="product-item">
+                    <img src="https://www.5kcarcare.com/assets/img/car-accessories/seat-cover.jpg" alt="Car Seat Cover" class="card-img-top">
+                    <h3>Luxurious Seat Covers</h3>
+                    <p>Transform your car’s interior with our premium seat covers, designed for comfort and style.</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOm1f2fHPVuCy-Y48IdMusYY5OGAYEJi4kfQ&s" alt="Car Mat" class="card-img-top">
+                    <h3>Durable Car Mats</h3>
+                    <p>Protect your vehicle’s floor with our durable, easy-to-clean car mats, available in various styles.</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://5.imimg.com/data5/SD/GO/MY-37501971/car-accessories.jpg" alt="Car Gadget" class="card-img-top">
+                    <h3>Advanced Car Gadgets</h3>
+                    <p>Upgrade your driving with cutting-edge car gadgets that add convenience and functionality.</p>
+                </div>
+            </div>
+            <a href="{% url 'shop_products' %}">Shop All Products</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Car Accessories Store. All Rights Reserved. Designed by Abhishek.</p>
+    </footer>
+</body>
+
+</html>

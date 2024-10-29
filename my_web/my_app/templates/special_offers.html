@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offers - Car Accessories Shop</title>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Special Offers - Car Accessories Shop</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="{% url 'products' %}">Products</a>
+            <a href="{% url 'special_offers' %}">Special Offers</a>
+            {% comment %} <a href="{% url 'contact' %}">Contact Us</a> {% endcomment %}
+        </nav>
+    </header>
+
+    <!-- Special Offers Section -->
+    <main class="container">
+        <section class="special-offers">
+            <h2>Exclusive Deals Just for You!</h2>
+            <div class="offer-items">
+                <!-- Offer Item 1 -->
+                <div class="offer-item">
+                    <img src="{% static 'assets/img/seat-cover-offer.jpg' %}" alt="Discounted Seat Covers">
+                    <h3>50% Off on Seat Covers</h3>
+                    <p>Get our premium seat covers at half the price. Limited stock available!</p>
+                    <span>Now only $29.99</span>
+                </div>
+
+                <!-- Offer Item 2 -->
+                <div class="offer-item">
+                    <img src="{% static 'assets/img/car-mat-offer.jpg' %}" alt="Discounted Car Mats">
+                    <h3>Buy One Get One Free: Car Mats</h3>
+                    <p>For a limited time, buy one car mat and get another free!</p>
+                    <span>Offer ends soon</span>
+                </div>
+
+                <!-- Offer Item 3 -->
+                <div class="offer-item">
+                    <img src="{% static 'assets/img/car-gadget-offer.jpg' %}" alt="Discounted Car Gadgets">
+                    <h3>25% Off on Car Gadgets</h3>
+                    <p>Upgrade your car with our advanced gadgets now at a discounted price.</p>
+                    <span>Only $49.99</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Car Accessories Store. All Rights Reserved. Designed by Abhishek.</p>
+    </footer>
+
+    <!-- Add your CSS here or link it if external -->
+    <style>
+        /* Basic styling for body, headers, and container */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            color: #ff2e63;
+        }
+        /* Special Offers Section */
+        .special-offers {
+            text-align: center;
+            padding: 20px;
+        }
+        .special-offers h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .offer-items {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .offer-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 30%;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            padding: 15px;
+            text-align: center;
+        }
+        .offer-item:hover {
+            transform: scale(1.05);
+        }
+        .offer-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .offer-item h3 {
+            color: #ff2e63;
+            margin: 10px 0;
+        }
+        .offer-item p {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .offer-item span {
+            font-size: 1.2em;
+            color: #ff2e63;
+            font-weight: bold;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.8em;
+        }
+    </style>
+</body>
+
+</html>

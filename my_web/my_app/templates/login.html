@@ -1,0 +1,108 @@
+{% load static %}
+{% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'your_css_file.css' %}">  <!-- Link to your CSS file -->
+    <style>
+        /* Apply a smooth gradient background */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: 'Poppins', sans-serif; /* Stylish font */
+            margin: 0;
+            color: #ffffff;
+        }
+
+        /* Style the login container */
+        .login-container {
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px); /* Adds a frosted glass effect */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 320px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        /* Style for form and inputs */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, button {
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+
+        /* Style the login button */
+        button {
+            background: linear-gradient(90deg, #43cea2, #185a9d);
+            color: #ffffff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-weight: 500;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #3bb9a0, #185a9d); /* Slightly lighter on hover */
+        }
+
+        p {
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        /* Add a link style for signup */
+        a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="{% url 'signup' %}">Sign up here</a>.</p>
+    </div>
+</body>
+</html>
